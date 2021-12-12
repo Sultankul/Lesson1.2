@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="32dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/image"
+
+
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/hello_there_n_welcome_back"
+        android:textSize="32sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:textAllCaps="true"
+        android:layout_marginTop="40dp"
+        android:id="@+id/txt_vw" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_vw"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingHorizontal="@dimen/normal_margin"
+        android:orientation="vertical"
+        >
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/sign_in"
+            android:text="Sign in to continue"
+            android:textSize="@dimen/text_medium"
+            android:layout_marginTop="@dimen/normal_margin"
+
+
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:hint="Username"
+            android:layout_marginTop="@dimen/small_margin"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:hint="Password"
+            app:endIconMode="password_toggle"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Forget password"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:layout_marginVertical="16dp"
+            android:id="@+id/forget"
+
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GO"
+            android:backgroundTint="@color/black"
+            android:id="@+id/buttn"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="New user? Sign up "
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginVertical="16dp"
+            android:id="@+id/new_user"
+
+            />
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
